@@ -23,10 +23,10 @@
     <nav>
         <h1>Nathan Gaul</h1>
         <ul class="navigation">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <!-- <li><a href="#about" class="nav-link">About</a></li> -->
             <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
         </ul>
         <button class="burger-menu" id="burger-menu">
             <ion-icon class="bars" name="menu-outline"></ion-icon>
@@ -35,20 +35,21 @@
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-        <img src="assets/images/wfh_1.svg" alt="jane-doe" loading="lazy" class="hero-img" />
+        <img src="assets/images/me.svg" alt="jane-doe" loading="lazy" class="hero-img" />
         <div class="bio">
-            <h2 class="bio-title">About Me</h2>
+            <!-- <h2 class="bio-title">About Me</h2> -->
             <p class="bio-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed dolorem fugit sapiente porro
-                veniam pariatur dolore nostrum delectus inventore tempore minus nemo, iste ullam illo laboriosam maiores
-                repudiandae quos!
+                &lt;developer&gt;
+            </p>
+            <p class="bio-text">
+                Designer
             </p>
         </div>
     </section>
 
     <!-- More about -->
-    <section class="more-about">
-        <h2>More About Me</h2>
+    <!-- <section class="more-about">
+        <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt excepturi quos obcaecati
             incidunt voluptatem ipsam sunt ipsum, autem deleniti cupiditate molestias quis unde quae totam porro dicta
             iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus</p>
@@ -56,6 +57,45 @@
             praesentium perferendis</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequuntur labore? Ea totam voluptas amet!
         </p>
+    </section> -->
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <h2 class="projects-title">Some of my Recent Projects</h2>
+        <div class="projects-container">
+            <div class="project-container project-card">
+                <img src="assets/images/pointSpire.png" alt="point-spire" loading="lazy" class="project-pic" />
+                <h3 class="project-title">PointSpire</h3>
+                <p class="project-details">
+                    A personal project manager built with Scrum on a team with MongoDB, OAuth authentication, React, and
+                    TypeScript.
+                </p>
+                <div class="project-links">
+                    <a href="https://www.point-spire.com/" target="_blank" class="project-link">Demo</a>
+                    <a href="https://github.com/PointSpire/PointSpire" target="_blank" class="project-link">Source</a>
+                </div>
+            </div>
+            <div class="project-container project-card">
+                <img src="assets/images/thesis.png" alt="point-spire" loading="lazy" class="project-pic" />
+                <h3 class="project-title">Artificial Data Deep Learning</h3>
+                <p class="project-details">
+                    My Master's Thesis based on training deep learning segmenation models with artifical data.
+                </p>
+                <div class="project-links">
+                    <a href="https://scholar.afit.edu/etd/5367/" target="_blank" class="project-link">Paper</a>
+                </div>
+            </div>
+            <!-- <div class="project-container project-card">
+                <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic" />
+                <h3 class="project-title">Greeny Earth</h3>
+                <p class="project-details">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                    ratione vel inventore labore commodi modi quos culpa aut saepe!
+                    Alias!
+                </p>
+                <a href="#" target="_blank" class="project-link">Check it Out</a>
+            </div> -->
+        </div>
     </section>
 
     <!-- Skills section -->
@@ -76,45 +116,8 @@
         </div>
     </section>
 
-    <!-- Projects section -->
-    <section class="projects" id="projects">
-        <h2 class="projects-title">Some of my Recent Projects</h2>
-        <div class="projects-container">
-            <div class="project-container project-card">
-                <img src="assets/images/expenseTracker.png" alt="expense-tracker" loading="lazy" class="project-pic" />
-                <h3 class="project-title">Expense Tracker</h3>
-                <p class="project-details">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                    ratione vel inventore labore commodi modi quos culpa aut saepe!
-                    Alias!
-                </p>
-                <a href="#" target="_blank" class="project-link">Check it Out</a>
-            </div>
-            <div class="project-container project-card">
-                <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic" />
-                <h3 class="project-title">Netflix Clone</h3>
-                <p class="project-details">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                    ratione vel inventore labore commodi modi quos culpa aut saepe!
-                    Alias!
-                </p>
-                <a href="#" target="_blank" class="project-link">Check it Out</a>
-            </div>
-            <div class="project-container project-card">
-                <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic" />
-                <h3 class="project-title">Greeny Earth</h3>
-                <p class="project-details">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                    ratione vel inventore labore commodi modi quos culpa aut saepe!
-                    Alias!
-                </p>
-                <a href="#" target="_blank" class="project-link">Check it Out</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact section -->
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
         <h2>Get In Touch With Me</h2>
         <div class="contact-form-container">
             <div class="contact-form">
@@ -138,7 +141,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Social accounts - Fixed to the right -->
     <div class="socials">
