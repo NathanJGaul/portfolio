@@ -1,1 +1,25 @@
 @import 'tailwindcss';
+@plugin 'daisyui' {
+   themes: light --default, dark --prefersdark, cupcake;
+}
+
+body {
+  /* Set base background color */
+  background-color: oklch(var(--b1));
+  /* Create grid lines using gradients and theme variables */
+  background-image:
+    /* Major grid lines (thicker/more opaque) */
+    linear-gradient(oklch(var(--bc) / 0.2) 1px, transparent 1px), /* Horizontal */
+    linear-gradient(90deg, oklch(var(--bc) / 0.2) 1px, transparent 1px), /* Vertical */
+    /* Minor grid lines (thinner/less opaque) */
+    linear-gradient(oklch(var(--bc) / 0.1) 1px, transparent 1px), /* Horizontal */
+    linear-gradient(90deg, oklch(var(--bc) / 0.1) 1px, transparent 1px); /* Vertical */
+  /* Define sizes for major and minor grids */
+  background-size:
+    50px 50px, /* Major grid cell size */
+    50px 50px, /* Major grid cell size */
+    10px 10px, /* Minor grid cell size */
+    10px 10px; /* Minor grid cell size */
+  /* Optional: Offset slightly to prevent lines overlapping at the very edge */
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}

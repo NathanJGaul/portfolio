@@ -20,6 +20,7 @@
 		"@sveltejs/kit": "^2.20.7",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/vite": "^4.1.4",
+		"daisyui": "^5.0.27",
 		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-svelte": "^3.5.1",
@@ -38,8 +39,5 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
-	},
-	"dependencies": {
-		"daisyui": "^5.0.25"
 	}
 }
