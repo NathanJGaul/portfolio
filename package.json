@@ -42,5 +42,8 @@
 			"sharp",
 			"workerd"
 		]
+	},
+	"dependencies": {
+		"theme-change": "^2.5.0"
 	}
 }
