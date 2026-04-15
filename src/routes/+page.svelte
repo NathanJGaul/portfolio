@@ -2,18 +2,18 @@
 	import FeaturedProjectCard from '$lib/components/FeaturedProjectCard.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import OtherProjectCard from '$lib/components/OtherProject.svelte';
-
-  import Navbar from '$lib/components/Navbar.svelte';
-  import Skills from '$lib/components/Skills.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-  
-
-  import projects from '$lib/data/projects';
-  import skills from '$lib/data/skills';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Skills from '$lib/components/Skills.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import Contact from '$lib/components/Contact.svelte';
+	import Experience from '$lib/components/Experience.svelte';
+	import StatBar from '$lib/components/StatBar.svelte';
 
-  // Theme controller for light/dark mode
-  let isDarkMode = $state(false);
+	import projects from '$lib/data/projects';
+	import skills from '$lib/data/skills';
+	import experience from '$lib/data/experience';
+
+	let isDarkMode = $state(false);
 </script>
 
 <Navbar {isDarkMode} />
@@ -23,50 +23,107 @@
 
 <!-- About Section -->
 <section id="about" class="py-16">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
-    
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <p class="text-lg">
-          With over 8 years of experience in software development and machine learning, I've worked on projects ranging from small 
-          startups to large enterprise solutions. I hold a Master's degree in Computer Science with a focus on Machine Learning 
-          and have published research on efficient model training techniques for large language models.
-        </p>
-        <p class="text-lg mt-4">
-          My approach combines strong theoretical foundations with practical engineering skills, allowing me to bridge the gap 
-          between cutting-edge research and production-ready applications. I'm particularly interested in leveraging AI to 
-          enhance developer productivity, automate repetitive tasks, and create intuitive developer experiences.
-        </p>
-        <p class="text-lg mt-4">
-          When I'm not coding, you can find me contributing to open-source projects, writing technical articles, or mentoring 
-          junior developers. I'm always looking for new challenges and opportunities to learn and grow.
-        </p>
-      </div>
-    </div>
-  </div>
+	<div class="container mx-auto px-4 max-w-6xl">
+		<h2 class="text-4xl font-bold mb-2 text-center">About Me</h2>
+		<div class="flex justify-center mb-10">
+			<span class="block w-16 h-1 bg-primary rounded"></span>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+			<!-- Bio -->
+			<div class="lg:col-span-3 card bg-base-100 shadow-xl">
+				<div class="card-body">
+					<p class="text-lg leading-relaxed">
+						I'm a software engineer with a background that spans defense systems, AI research, and
+						full-stack web development. I spent a decade as an Air Force officer, where I led
+						engineering programs, directed operational testing for major defense acquisitions, and
+						conducted AI research in collaboration with MIT. I now build production software at DS2,
+						developing mission-planning tools for government clients.
+					</p>
+					<p class="text-lg leading-relaxed mt-4">
+						My technical work ranges from training deep learning models on synthetically generated
+						imagery to building React and Svelte web applications to developing Windows desktop tools
+						in C# and WPF. I'm comfortable across the stack and across domains — from writing Python
+						data pipelines to designing system architecture to shipping user-facing features.
+					</p>
+				</div>
+			</div>
+
+			<!-- Quick facts -->
+			<div class="lg:col-span-2 card bg-base-100 shadow-xl">
+				<div class="card-body">
+					<h3 class="card-title font-semibold text-lg mb-2">Quick Facts</h3>
+					<ul class="space-y-3 text-sm">
+						<li class="flex gap-3">
+							<span class="text-primary shrink-0 mt-0.5">▸</span>
+							<span><span class="font-medium">Education:</span> MS Electrical Engineering (Software
+								Engineering Focus), AFIT</span
+							>
+						</li>
+						<li class="flex gap-3">
+							<span class="text-primary shrink-0 mt-0.5">▸</span>
+							<span><span class="font-medium">Education:</span> BS Electrical Engineering, University
+								of Idaho</span
+							>
+						</li>
+						<li class="flex gap-3">
+							<span class="text-primary shrink-0 mt-0.5">▸</span>
+							<span
+								><span class="font-medium">Currently:</span> Software Engineer at DS2, Niceville FL</span
+							>
+						</li>
+						<li class="flex gap-3">
+							<span class="text-primary shrink-0 mt-0.5">▸</span>
+							<span
+								><span class="font-medium">Former:</span> USAF Officer (O-4), AI Research Fellow at
+								MIT</span
+							>
+						</li>
+						<li class="flex gap-3">
+							<span class="text-primary shrink-0 mt-0.5">▸</span>
+							<span
+								><span class="font-medium">Clearance:</span> Active Top Secret / SCI</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Stat bar -->
+		<div class="mt-8">
+			<StatBar />
+		</div>
+	</div>
 </section>
 
-<!-- Featured Projects Section -->
+<!-- Experience Section -->
+<Experience {experience} />
+
+<!-- Projects Section -->
 <section id="projects" class="py-16 bg-base-200">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-4xl font-bold mb-2 text-center">Featured Projects</h2>
-    <p class="text-center mb-8 opacity-80">Check out some of my recent work</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {#each projects.filter(p => p.featured) as project}
-        <FeaturedProjectCard {project} />
-      {/each}
-    </div>
-    
-    <h2 class="text-3xl font-bold mt-16 mb-8 text-center">Other Projects</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {#each projects.filter(p => !p.featured) as project}
-        <OtherProjectCard {project} />
-      {/each}
-    </div>
-  </div>
+	<div class="container mx-auto px-4 max-w-6xl">
+		<h2 class="text-4xl font-bold mb-2 text-center">Projects</h2>
+		<div class="flex justify-center mb-3">
+			<span class="block w-16 h-1 bg-primary rounded"></span>
+		</div>
+		<p class="text-center mb-10 opacity-70">A selection of personal and open-source work</p>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			{#each projects.filter((p) => p.featured) as project}
+				<FeaturedProjectCard {project} />
+			{/each}
+		</div>
+
+		{#if projects.filter((p) => !p.featured).length > 0}
+			<h3 class="text-2xl font-bold mt-14 mb-6 text-center">Other Projects</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				{#each projects.filter((p) => !p.featured) as project}
+					<OtherProjectCard {project} />
+				{/each}
+			</div>
+		{/if}
+	</div>
 </section>
 
 <!-- Skills Section -->
