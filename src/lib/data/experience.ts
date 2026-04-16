@@ -32,7 +32,7 @@ const experience: ExperienceEntry[] = [
 		]
 	},
 	{
-		company: 'AF Test & Evaluation Center',
+		company: 'Air Force Operational Test & Evaluation Center',
 		role: 'Operational Test Analyst',
 		period: 'March 2022 – March 2026',
 		type: 'leadership',
