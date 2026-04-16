@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title" class="w-full h-full">
+  <title>PointSpire placeholder</title>
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="80" fill="#0f172a" />
+  <rect x="100" y="100" width="1000" height="600" rx="60" fill="url(#g2)" opacity="0.92" />
+  <circle cx="300" cy="320" r="90" fill="#ffffff" opacity="0.18" />
+  <circle cx="430" cy="450" r="120" fill="#ffffff" opacity="0.18" />
+  <path d="M620 260h250a30 30 0 0 1 30 30v250" fill="none" stroke="#fff" stroke-width="28" stroke-linecap="round" opacity="0.8" />
+  <text x="600" y="530" text-anchor="middle" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="60" font-weight="700">PointSpire</text>
+</svg>

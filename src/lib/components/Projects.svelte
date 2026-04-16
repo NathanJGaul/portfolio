@@ -17,17 +17,21 @@
 		</div>
 		<p class="text-center mb-10 opacity-70">A selection of personal and open-source work</p>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		<div class="flex flex-wrap justify-center gap-8">
 			{#each projects.filter((p) => p.featured) as project}
-				<FeaturedProjectCard {project} />
+				<div class="w-full min-w-0 md:w-1/2 lg:w-1/2 flex">
+					<FeaturedProjectCard {project} />
+				</div>
 			{/each}
 		</div>
 
 		{#if projects.filter((p) => !p.featured).length > 0}
 			<h3 class="text-2xl font-bold mt-14 mb-6 text-center">Other Projects</h3>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="flex flex-wrap justify-center gap-6">
 				{#each projects.filter((p) => !p.featured) as project}
-					<OtherProjectCard {project} />
+					<div class="w-full min-w-0 md:w-1/2 lg:w-1/3 flex">
+						<OtherProjectCard {project} />
+					</div>
 				{/each}
 			</div>
 		{/if}
