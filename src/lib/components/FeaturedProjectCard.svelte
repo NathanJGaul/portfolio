@@ -8,7 +8,7 @@
 		<figure><img src={project.image} alt={project.title} /></figure>
 	{:else}
 		<div
-			class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center"
+			class="h-48 bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center"
 		>
 			<span class="text-5xl opacity-20 font-mono select-none">&lt;/&gt;</span>
 		</div>
