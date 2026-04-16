@@ -1,16 +1,19 @@
+<script>
+	const email = ['nathanjgaul', 'gmail.com'].join('@');
+</script>
+
 <section id="contact" class="py-16">
 	<div class="container mx-auto px-4 max-w-3xl text-center">
 		<h2 class="text-4xl font-bold mb-2">Get in Touch</h2>
 		<div class="flex justify-center mb-10">
 			<span class="block w-16 h-1 bg-primary rounded"></span>
 		</div>
-
 		<div class="card bg-base-100 shadow-xl">
 			<div class="card-body items-center py-12 px-8">
 				<p class="text-lg leading-relaxed max-w-lg mb-8">
 					Open to new opportunities in software engineering, defense tech, and AI applications. Reach out directly. I'm always happy to talk.
 				</p>
-				<a href="mailto:nathanjgaul@gmail.com" class="btn btn-primary btn-lg">
+				<a href="mailto:{email}" class="btn btn-primary btn-lg">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="20"
