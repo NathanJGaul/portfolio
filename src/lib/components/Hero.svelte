@@ -35,7 +35,7 @@
 			<div class="flex flex-wrap gap-3 mt-6">
 				<a href="#contact" class="btn btn-primary">Get in touch</a>
 				<a href="#projects" class="btn btn-outline">View Projects</a>
-				<a
+				<!-- <a
 					href="/resume.pdf"
 					download
 					class="btn btn-ghost gap-2"
@@ -56,7 +56,7 @@
 						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
 					Resume
-				</a>
+				</a> -->
 				<a
 					href="https://www.linkedin.com/in/nathanjgaul/"
 					target="_blank"
