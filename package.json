@@ -42,7 +42,12 @@
       "esbuild",
       "sharp",
       "workerd"
-    ]
+    ],
+    "supportedArchitectures": {
+      "os": ["current", "linux"],
+      "cpu": ["current", "x64"],
+      "libc": ["current", "glibc"]
+    }
   },
   "dependencies": {
     "theme-change": "^2.5.0"
