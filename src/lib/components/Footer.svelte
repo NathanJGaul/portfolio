@@ -2,8 +2,8 @@
 	const year = new Date().getFullYear();
 </script>
 
-<footer class="footer footer-center p-10 bg-base-300 text-base-content">
-	<div class="flex gap-4 mb-2">
+<footer class="footer flex flex-row items-center justify-between p-10 bg-base-300 text-base-content">
+	<div class="flex justify-center gap-4 mb-2 flex-1">
 		<a
 			href="https://www.linkedin.com/in/nathanjgaul/"
 			target="_blank"
@@ -41,9 +41,11 @@
 			>
 		</a>
 	</div>
-	<div>
+	<div class="flex flex-col items-center justify-center text-center flex-1">
 		<p class="font-bold">Nathan Gaul</p>
 		<p class="opacity-60 text-sm">Software & Autonomy Engineer &middot; Building for high-stakes environments.</p>
 	</div>
-	<p class="opacity-40 text-xs">&copy; {year} Nathan Gaul &middot; All rights reserved</p>
+	<div class="flex justify-center flex-1">
+		<p class="opacity-40 text-xs text-center">&copy; {year} Nathan Gaul &middot; All rights reserved</p>
+	</div>
 </footer>
