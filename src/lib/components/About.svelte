@@ -17,17 +17,10 @@
 			<div class="lg:col-span-3 card bg-base-100 shadow-xl">
 				<div class="card-body">
 					<p class="text-lg leading-relaxed">
-						I'm a software engineer with a background that spans defense systems, AI research, and
-						full-stack web development. I spent a decade as an Air Force officer, where I led
-						engineering programs, directed operational testing for major defense acquisitions, and
-						conducted AI research in collaboration with MIT. I now build production software at DS2,
-						developing mission-planning tools for government clients.
+						I'm a software engineer with a background that spans defense systems, AI research, and full-stack web development. I spent nearly a decade as an Air Force officer, where I led engineering programs, directed operational testing for major defense acquisitions, and conducted AI research in collaboration with MIT. I now build production software at DS2, developing sUAS aerial assessment software for government clients.
 					</p>
 					<p class="text-lg leading-relaxed mt-4">
-						My technical work ranges from training deep learning models on synthetically generated
-						imagery to building React and Svelte web applications to developing Windows desktop tools
-						in C# and WPF. I'm comfortable across the stack and across domains — from writing Python
-						data pipelines to designing system architecture to shipping user-facing features.
+						My technical work ranges from training deep learning models on synthetically generated imagery to building React and Svelte web applications to developing Windows desktop tools in C# and WPF. I'm comfortable across the stack and across domains — from writing Python data pipelines to designing system architecture to shipping user-facing features.
 					</p>
 				</div>
 			</div>
@@ -58,14 +51,7 @@
 						<li class="flex gap-3">
 							<span class="text-primary shrink-0 mt-0.5">▸</span>
 							<span
-								><span class="font-medium">Former:</span> USAF Officer (O-4), AI Research Fellow at
-								MIT</span
-							>
-						</li>
-						<li class="flex gap-3">
-							<span class="text-primary shrink-0 mt-0.5">▸</span>
-							<span
-								><span class="font-medium">Clearance:</span> Active Top Secret / SCI</span
+								><span class="font-medium">Former:</span> USAF Officer, AI Research Fellow at MIT</span
 							>
 						</li>
 					</ul>

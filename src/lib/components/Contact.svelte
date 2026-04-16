@@ -8,8 +8,7 @@
 		<div class="card bg-base-100 shadow-xl">
 			<div class="card-body items-center py-12 px-8">
 				<p class="text-lg leading-relaxed max-w-lg mb-8">
-					Open to new opportunities in software engineering, defense tech, and AI applications.
-					Reach out directly — I'm always happy to talk.
+					Open to new opportunities in software engineering, defense tech, and AI applications. Reach out directly. I'm always happy to talk.
 				</p>
 				<a href="mailto:nathanjgaul@gmail.com" class="btn btn-primary btn-lg">
 					<svg

@@ -1,13 +1,13 @@
 <script lang="ts">
-	const profileImageUrl = '';
+	const profileImageUrl = '/images/hero-profile.jpg';
 </script>
 
 <div id="hero" class="hero min-h-screen">
-	<div class="hero-content flex-col lg:flex-row-reverse max-w-6xl gap-12 py-20">
+	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
 		{#if profileImageUrl}
 			<img
 				src={profileImageUrl}
-				class="max-w-sm rounded-lg shadow-2xl mask mask-squircle"
+				class="w-full max-w-sm rounded-lg shadow-2xl mask mask-squircle"
 				alt="Nathan Gaul"
 			/>
 		{:else}
@@ -19,18 +19,15 @@
 				</div>
 			</div>
 		{/if}
-		<div class="max-w-xl">
+		<div class="w-full lg:w-7/12 max-w-xl">
 			<h1 class="text-5xl font-bold">Nathan Gaul</h1>
 			<p class="text-2xl mt-2 font-semibold">Software & Autonomy Engineer</p>
 			<p class="text-base-content/60 mt-1 text-lg">
 				Defense systems &middot; AI research &middot; Full-stack web
 			</p>
 			<div class="divider my-3"></div>
-			<p class="text-lg leading-relaxed">
-				I build software for high-stakes environments — from computer vision pipelines for aircraft
-				inspection to LLM research tools for the Air Force to full-stack web applications. With an MS
-				in Electrical Engineering from AFIT and a decade of experience across defense programs, AI
-				research, and production software, I bring both rigor and range to engineering problems.
+			<p class="text-lg leading-relaxed text-left">
+				I build software for high-stakes environments, including computer vision pipelines for aircraft inspection, LLM research tools for the Air Force, and full-stack web applications. I have an MS in Electrical Engineering from AFIT and a decade of experience in defense programs, AI research, and production software.
 			</p>
 			<div class="flex flex-wrap gap-3 mt-6">
 				<a href="#contact" class="btn btn-primary">Get in touch</a>
