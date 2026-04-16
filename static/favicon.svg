@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Nord Polar Night background with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#2E3440"/>
+  <!-- Subtle inner border -->
+  <rect x="1" y="1" width="30" height="30" rx="6" fill="none" stroke="#88C0D0" stroke-width="0.75" opacity="0.4"/>
+  <!-- N glyph: left vertical, diagonal, right vertical -->
+  <line x1="5" y1="22" x2="5" y2="10" stroke="#88C0D0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="5" y1="10" x2="12" y2="22" stroke="#88C0D0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12" y1="10" x2="12" y2="22" stroke="#88C0D0" stroke-width="2" stroke-linecap="round"/>
+  <!-- G glyph: arc + horizontal bar -->
+  <path d="M27 13 A7 7 0 1 0 27 19 L22 19 L22 16" fill="none" stroke="#5E81AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
