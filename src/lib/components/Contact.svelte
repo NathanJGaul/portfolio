@@ -1,27 +1,40 @@
-<section id="contact" class="py-16 bg-base-200">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
-    
-    <div class="card bg-base-100 shadow-xl max-w-lg mx-auto">
-      <div class="card-body">
-        <!-- <div class="form-control">
-          <label class="input">
-            <span class="label">Name</span>
-            <input type="text" class="input" placeholder="Your name" />
-          </label>
-        </div> -->
+<script>
+	const email = ['nathanjgaul', 'gmail.com'].join('@');
+</script>
 
-        <fieldset class="fieldset">
-          <legend class="fieldset-legend">Name</legend>
-          <input type="text" class="input w-full" placeholder="Your name">
-        </fieldset>
-        
-        <!-- <div class="form-control mt-4">
-          <label class="input">
-            <span class="label">Email</span>
-            <input type="email" class="input" placeholder="email@example.com" />
-          </label>
-        </div> -->
+<section id="contact" class="py-16">
+	<div class="container mx-auto px-4 max-w-3xl text-center">
+		<h2 class="text-4xl font-bold mb-2">Get in Touch</h2>
+		<div class="flex justify-center mb-10">
+			<span class="block w-16 h-1 bg-primary rounded"></span>
+		</div>
+
+		<div class="card bg-base-100 shadow-xl">
+			<div class="card-body items-center py-12 px-8">
+				<p class="text-lg leading-relaxed max-w-lg mb-8">
+					Open to new opportunities in software engineering, defense tech, and AI applications. Reach out directly. I'm always happy to talk.
+				</p>
+				<a href="mailto:{email}" class="btn btn-primary btn-lg">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="mr-1"
+					>
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+						></path>
+						<polyline points="22,6 12,13 2,6"></polyline>
+					</svg>
+					Send an Email
+				</a>
+			</div>
+		</div>
 
         <fieldset class="fieldset">
           <legend class="fieldset-legend">Email</legend>
