@@ -1,8 +1,10 @@
 <script lang="ts">
 	import portraitImg from '$lib/images/portrait-nobg.png?enhanced';
+	import HeroBackdrop from '$lib/components/HeroBackdrop.svelte';
 </script>
 
-<div id="hero" class="hero min-h-screen">
+<div id="hero" class="hero min-h-screen relative overflow-hidden">
+	<HeroBackdrop />
 	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
 		<div class="relative w-full max-w-sm">
 			<enhanced:img
