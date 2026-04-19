@@ -4,17 +4,22 @@
 	import type { Component } from 'svelte';
 
 	let {
-		backdrop = MountainBackdrop
+		backdrop = MountainBackdrop,
+		backdropMargin = 5
 	}: {
 		/** Backdrop canvas component to render behind the hero. Defaults to MountainBackdrop. */
 		backdrop?: Component;
+		/** Margin (in Tailwind spacing units, 1 unit = 0.25rem) the backdrop extends beyond the image. */
+		backdropMargin?: number;
 	} = $props();
 </script>
 
 <div id="hero" class="hero min-h-screen relative overflow-hidden">
-	<svelte:component this={backdrop} />
 	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
 		<div class="relative w-full max-w-sm">
+			<div class="absolute" style="inset: -{backdropMargin * 0.25}rem;">
+				<svelte:component this={backdrop} />
+			</div>
 			<enhanced:img
 				src={portraitImg}
 				sizes="(min-width: 1024px) 384px, 100vw"
