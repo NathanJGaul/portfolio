@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import type { BackdropProps } from '$lib/types/backdrop';
 
 	interface Particle {
 		x: number;
@@ -18,15 +19,11 @@
 		opacity = 0.5,
 		interactive = true,
 		color = null
-	}: {
+	}: BackdropProps & {
 		particleCount?: number;
 		speed?: number;
 		connectionDistance?: number;
 		particleSize?: number;
-		opacity?: number;
-		interactive?: boolean;
-		/** CSS color string (e.g. "#fff", "oklch(70% 0.2 250)"). Defaults to theme primary. */
-		color?: string | null;
 	} = $props();
 
 	let canvas: HTMLCanvasElement;
