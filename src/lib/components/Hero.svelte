@@ -1,24 +1,21 @@
 <script lang="ts">
-	const profileImageUrl = '/images/hero-profile.jpg';
+	import portraitImg from '$lib/images/portrait-nobg.png?enhanced';
 </script>
 
 <div id="hero" class="hero min-h-screen">
 	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
-		{#if profileImageUrl}
-			<img
-				src={profileImageUrl}
-				class="w-full max-w-sm rounded-lg shadow-2xl mask mask-squircle"
+		<div class="relative w-full max-w-sm">
+			<enhanced:img
+				src={portraitImg}
+				sizes="(min-width: 1024px) 384px, 100vw"
+				class="w-full"
 				alt="Nathan Gaul"
 			/>
-		{:else}
-			<div class="avatar placeholder shrink-0">
-				<div
-					class="bg-primary text-primary-content rounded-full w-48 shadow-2xl ring ring-primary ring-offset-base-100 ring-offset-4"
-				>
-					<span class="text-5xl font-bold select-none">NG</span>
-				</div>
-			</div>
-		{/if}
+			<div
+				class="absolute inset-0"
+				style="background: radial-gradient(ellipse 75% 85% at 50% 45%, transparent 55%, var(--color-base-100) 95%);"
+			></div>
+		</div>
 		<div class="w-full lg:w-7/12 max-w-xl">
 			<h1 class="text-5xl font-bold">Nathan Gaul</h1>
 			<p class="text-2xl mt-2 font-semibold">Software & Autonomy Engineer</p>
