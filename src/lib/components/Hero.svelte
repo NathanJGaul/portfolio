@@ -1,15 +1,17 @@
 <script lang="ts">
-	const profileImageUrl = '/images/hero-profile.jpg';
+	const profileImageUrl = '/images/portrait-nobg.png';
 </script>
 
 <div id="hero" class="hero min-h-screen">
 	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
 		{#if profileImageUrl}
-			<img
-				src={profileImageUrl}
-				class="w-full max-w-sm rounded-lg shadow-2xl mask mask-squircle"
-				alt="Nathan Gaul"
-			/>
+			<div class="relative w-full max-w-sm">
+				<img src={profileImageUrl} class="w-full" alt="Nathan Gaul" />
+				<div
+					class="absolute inset-0"
+					style="background: radial-gradient(ellipse 75% 85% at 50% 45%, transparent 55%, var(--color-base-100) 95%);"
+				></div>
+			</div>
 		{:else}
 			<div class="avatar placeholder shrink-0">
 				<div

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find node_modules/.pnpm/daisyui*/node_modules/daisyui -name \"*.css\")"
+    ]
+  }
+}
