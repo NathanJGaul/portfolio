@@ -1,12 +1,12 @@
 <script lang="ts">
 	import portraitImg from '$lib/images/portrait-nobg.png?enhanced';
-	import ParticleBackdrop from '$lib/components/ParticleBackdrop.svelte';
+	import MountainBackdrop from '$lib/components/MountainBackdrop.svelte';
 	import type { Component } from 'svelte';
 
 	let {
-		backdrop = ParticleBackdrop
+		backdrop = MountainBackdrop
 	}: {
-		/** Backdrop canvas component to render behind the hero. Defaults to ParticleBackdrop. */
+		/** Backdrop canvas component to render behind the hero. Defaults to MountainBackdrop. */
 		backdrop?: Component;
 	} = $props();
 </script>
