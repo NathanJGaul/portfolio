@@ -17,9 +17,9 @@
 <div id="hero" class="hero min-h-screen relative overflow-hidden">
 	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl gap-12 py-20">
 		<div class="relative w-full max-w-sm">
-			<div class="absolute" style="inset: -{backdropMargin * 0.25}rem;">
+			<!-- <div class="absolute" style="inset: -{backdropMargin * 0.25}rem;">
 				<svelte:component this={backdrop} />
-			</div>
+			</div> -->
 			<enhanced:img
 				src={portraitImg}
 				sizes="(min-width: 1024px) 384px, 100vw"
