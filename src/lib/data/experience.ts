@@ -9,46 +9,48 @@ export type ExperienceEntry = {
 
 const experience: ExperienceEntry[] = [
 	{
-		company: 'DS2',
-		role: 'Software Engineer',
-		period: 'March 2026 – Present',
+		company: 'DS2 / Dynamic Software Solutions',
+		role: 'Software Engineer, Government Services',
+		period: 'Mar 2026 – Present',
 		type: 'software',
 		bullets: [
-			'Develop expeditionary planning tools for government and defense clients using C# and WPF',
-			'Build and maintain desktop applications serving mission-critical operational planning workflows',
-			'Deliver custom software solutions for military, defense, and commercial organizations'
+			'Building production C#/.NET applications for DoD clients across the full stack: backend service architecture, REST API integration, and CI/CD-gated testing',
+			'Developed a GPU-accelerated Python computer vision system for real-time airfield damage detection using YOLOv8x, SAHI sliced inference, GStreamer RTSP ingestion, BotSort tracking, and KLV/MISB-0601 metadata parsing',
+			'Docker-containerized the companion FastAPI test harness with regression tests across single-image, RTSP video, and batch modes, aiding military operators to assess airfield damage in the field at real time'
 		]
 	},
 	{
 		company: 'Air Force–MIT AI Accelerator',
 		role: 'AI Applications Research Fellow',
-		period: 'April 2023 – August 2023',
+		period: 'Apr 2023 – Aug 2023',
 		type: 'research',
 		badge: 'MIT Collaboration',
 		bullets: [
-			'Conducted applied LLM research using GPT-3.5 and GPT-4 via the OpenAI API for Air Force use cases',
-			'Built AI tooling and prototypes with Python and Streamlit, automating operational reporting by 800+ hours/year',
-			'Prototyped real-time AI feedback systems for pilot training programs in direct collaboration with MIT researchers'
+			'Deployed production GPT-4 pipelines in Python to automate USAF operational reporting, cutting 800+ hours/year of manual work; pipelines ran in a live USAF test environment with non-technical operators as primary users',
+			'Built the full stack: data ingestion from structured operational feeds, LLM integration with OpenAI API and LangChain, multi-step agent workflows for summarization and decision support, and a Streamlit front end for non-technical operators',
+			'Pushed AI/LLM tool adoption across the fellowship, prototyping agentic workflows and presenting findings to Air Force leadership'
 		]
 	},
 	{
 		company: 'Air Force Operational Test & Evaluation Center',
-		role: 'Operational Test Analyst',
-		period: 'March 2022 – March 2026',
+		role: 'Test Engineering Deputy / Operational Test Analyst',
+		period: 'Mar 2022 – Mar 2026',
 		type: 'leadership',
 		bullets: [
-			"Directed operational testing for the DoD's first Joint Cyber C2 platform, resolving 6 critical deficiencies for 23K warfighters",
-			'Led evaluation of multi-billion-dollar defense acquisition programs, informing DoD-level acquisition decisions',
-			'Conducted cyber vulnerability assessment for a bi-national cloud-based C2 program, accelerating schedule by 15%'
+			"Led the one-year tri-service evaluation of the DoD's first Joint Cyber C2 platform ($765M, 23K warfighters): gathered requirements from Air Force, Army, and Navy field operators, translated them into test architecture, identified 6 critical deficiencies, and tracked resolution across service stakeholders",
+			'Directed AI-enabled operational test for 7 Joint Major Defense Acquisition Programs ($14.2B+), validating C2, AI, and autonomous system capabilities against national security mission requirements',
+			'Designed HIL/SIL operational test for defense weapons systems; managed data collection plans and KPP/KSA performance metrics across 47 flight test events',
+			'Ran cyber vulnerability assessments for a $350M cloud-based C2 program, saving 1,200 man-hours and accelerating the test schedule by 15%',
+			'Led a 63-member, 10-organization working group synchronizing operators, developers, and integration/test/training teams across 2 joint C2 programs totaling $1.5B'
 		]
 	},
 	{
 		company: 'Air Force Research Laboratory',
-		role: 'Research Engineer & Program Manager',
-		period: 'June 2017 – July 2020',
+		role: 'Engineer & Deputy Program Manager',
+		period: 'Jun 2017 – Jul 2020',
 		type: 'leadership',
 		bullets: [
-			'Led a 34-person multidisciplinary engineering team on an 8-figure directed energy research program',
+			'Managed a 34-person multidisciplinary engineering team on a $12M directed energy research program, coordinating hardware and software subsystem integration with industry partners across the full program lifecycle',
 			'Designed a scalable pulsed laser system exceeding energy targets by 50% through optimized thermal management',
 			'Prevented a 6-month schedule slip through early risk-reduction analysis, protecting a 7-figure program timeline'
 		]

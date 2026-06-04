@@ -1,9 +1,60 @@
 @import 'tailwindcss';
+
 @plugin 'daisyui' {
-   themes: nord --default, dim --prefersdark;
+  themes:
+    nord --default,
+    dim --prefersdark;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-geist-sans: 'Geist Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-geist-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
 html {
+  font-family: var(--font-geist-sans);
   scroll-behavior: smooth;
 }
 
@@ -12,22 +63,37 @@ section[id] {
 }
 
 body {
-  /* Set base background color */
   background-color: oklch(var(--b1));
-  /* Create grid lines using gradients and theme variables */
   background-image:
-    /* Major grid lines (thicker/more opaque) */
-    linear-gradient(oklch(var(--bc) / 0.12) 1px, transparent 1px), /* Horizontal */
-    linear-gradient(90deg, oklch(var(--bc) / 0.12) 1px, transparent 1px), /* Vertical */
-    /* Minor grid lines (thinner/less opaque) */
-    linear-gradient(oklch(var(--bc) / 0.06) 1px, transparent 1px), /* Horizontal */
-    linear-gradient(90deg, oklch(var(--bc) / 0.06) 1px, transparent 1px); /* Vertical */
-  /* Define sizes for major and minor grids */
+    linear-gradient(oklch(var(--bc) / 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(var(--bc) / 0.10) 1px, transparent 1px),
+    linear-gradient(oklch(var(--bc) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(var(--bc) / 0.04) 1px, transparent 1px);
   background-size:
-    50px 50px, /* Major grid cell size */
-    50px 50px, /* Major grid cell size */
-    10px 10px, /* Minor grid cell size */
-    10px 10px; /* Minor grid cell size */
-  /* Optional: Offset slightly to prevent lines overlapping at the very edge */
+    50px 50px,
+    50px 50px,
+    10px 10px,
+    10px 10px;
   background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  mix-blend-mode: overlay;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }

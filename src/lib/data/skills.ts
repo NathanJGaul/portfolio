@@ -8,6 +8,7 @@ export type Skills = {
 	frameworks: SkillItem[];
 	tools: SkillItem[];
 	domains: SkillItem[];
+	certifications: SkillItem[];
 };
 
 const skills: Skills = {
@@ -17,31 +18,45 @@ const skills: Skills = {
 		{ name: 'C#', tier: 'primary' },
 		{ name: 'C++', tier: 'primary' },
 		{ name: 'JavaScript', tier: 'primary' },
-		{ name: 'Go', tier: 'secondary' }
+		{ name: 'Go', tier: 'secondary' },
+		{ name: 'SQL', tier: 'secondary' }
 	],
 	frameworks: [
-		{ name: 'Svelte / SvelteKit', tier: 'primary' },
 		{ name: 'React', tier: 'primary' },
+		{ name: 'Svelte / SvelteKit', tier: 'primary' },
 		{ name: 'Node.js', tier: 'primary' },
-		{ name: 'WPF', tier: 'primary' },
+		{ name: '.NET / WPF', tier: 'primary' },
 		{ name: 'TensorFlow', tier: 'primary' },
-		{ name: 'Streamlit', tier: 'secondary' }
+		{ name: 'FastAPI', tier: 'primary' },
+		{ name: 'LangChain', tier: 'secondary' },
+		{ name: 'Streamlit', tier: 'secondary' },
+		{ name: 'gRPC', tier: 'secondary' }
 	],
 	tools: [
 		{ name: 'Docker', tier: 'primary' },
-		{ name: 'Git', tier: 'primary' },
+		{ name: 'Git / GitHub', tier: 'primary' },
 		{ name: 'Linux', tier: 'primary' },
-		{ name: 'MongoDB', tier: 'primary' },
-		{ name: 'Blender', tier: 'secondary' },
-		{ name: 'OpenAI API', tier: 'secondary' }
+		{ name: 'OpenAI API', tier: 'primary' },
+		{ name: 'CI/CD Pipelines', tier: 'primary' },
+		{ name: 'YOLO / SAHI', tier: 'secondary' },
+		{ name: 'GStreamer', tier: 'secondary' },
+		{ name: 'MongoDB', tier: 'secondary' },
+		{ name: 'Blender', tier: 'secondary' }
 	],
 	domains: [
-		{ name: 'Machine Learning / CV', tier: 'primary' },
 		{ name: 'Defense & Government Software', tier: 'primary' },
+		{ name: 'Machine Learning / Computer Vision', tier: 'primary' },
 		{ name: 'Full-Stack Web', tier: 'primary' },
 		{ name: 'LLM Application Development', tier: 'primary' },
-		{ name: 'Autonomy Systems', tier: 'secondary' },
-		{ name: 'Agile / Scrum', tier: 'secondary' }
+		{ name: 'C2 Systems', tier: 'primary' },
+		{ name: 'HIL/SIL Test', tier: 'secondary' },
+		{ name: 'DevSecOps', tier: 'secondary' },
+		{ name: 'Engineering Leadership', tier: 'secondary' }
+	],
+	certifications: [
+		{ name: 'Stanford AI Professional Program', tier: 'primary' },
+		{ name: 'CompTIA Security+ (SY0-701)', tier: 'secondary' },
+		{ name: 'Air Force Achievement Medal', tier: 'secondary' }
 	]
 };
 

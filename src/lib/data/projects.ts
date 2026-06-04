@@ -11,14 +11,31 @@ export type Project = {
 
 const projects: Project[] = [
 	{
-		title: 'Computer Vision Inspection Pipeline',
+		title: 'WarBot',
 		description:
-			'End-to-end deep learning pipeline for automated aircraft surface inspection. I built a UNet segmentation model that is trained entirely on synthetic images created with Blender. This approach removes the need for expensive real-world annotation data collection.',
-		highlight: 'Reduced real-world training data requirements by 90%',
+			'End-to-end GPT-4 pipeline for USAF operator use: RAG-adjacent integration with structured operational data, multi-step agent workflows for summarization and reporting, and a Streamlit front end for non-technical users. Deployed to a live USAF operational test environment, cutting 800+ hours/year of manual work.',
+		highlight: 'Deployed to USAF test environment, saved 800+ hours/year',
+		tech: ['Python', 'OpenAI API', 'LangChain', 'GPT-4', 'Streamlit'],
+		github: 'https://github.com/NathanJGaul/warbot',
+		featured: true
+	},
+	{
+		title: 'Damage Detection Algorithm (DDA)',
+		description:
+			'Real-time airfield damage detection from aerial ISR video using YOLOv8x, SAHI sliced inference, GStreamer RTSP ingestion, BotSort tracking, and KLV/MISB-0601 metadata parsing. Docker-containerized with a CI/CD FastAPI test harness for repeatable regression testing across single-image, RTSP video, and batch modes.',
+		highlight: 'GPU-accelerated real-time detection from aerial video feeds',
+		tech: ['Python', 'C#', 'Docker', 'YOLOv8', 'gRPC', 'FastAPI', 'GStreamer'],
+		featured: true
+	},
+	{
+		title: 'Computer Vision Pipeline with Synthetic Data',
+		description:
+			'Synthetic imagery pipeline in Python, TensorFlow, and Blender to train a UNet segmentation model for automated aircraft surface inspection. This approach removes the need for expensive real-world annotation data collection by training entirely on procedurally generated images.',
+		highlight: 'IEEE Published, 2022 — reduced real-world training data by 90%',
 		tech: ['Python', 'TensorFlow', 'Blender', 'Docker', 'NumPy'],
 		github: 'https://github.com/NathanJGaul/thesis-pipeline',
 		image: '/images/projects/computer-vision-inspection.png',
-		featured: true
+		featured: false
 	},
 	{
 		title: 'PointSpire',
@@ -29,17 +46,7 @@ const projects: Project[] = [
 		github: 'https://github.com/NathanJGaul/PointSpire',
 		image: '/images/projects/pointspire.svg',
 		featured: false
-	},
-	// {
-	// 	title: 'Text-to-Speech Ebook Converter',
-	// 	description:
-	// 		'Browser-based tool that parses ebook content and synthesizes it into audio entirely on the client side. No server required — all processing happens in the browser using the Web Speech API.',
-	// 	highlight: 'Fully client-side, zero server dependency',
-	// 	tech: ['TypeScript', 'Svelte', 'Web Speech API'],
-	// 	github: 'https://github.com/NathanJGaul/standard_ebooks_tts',
-	// 	image: '/images/projects/text-to-speech.svg',
-	// 	featured: false
-	// }
+	}
 ];
 
 export default projects;
