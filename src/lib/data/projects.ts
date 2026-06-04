@@ -31,7 +31,7 @@ const projects: Project[] = [
 		title: 'Computer Vision Pipeline with Synthetic Data',
 		description:
 			'Synthetic imagery pipeline in Python, TensorFlow, and Blender to train a UNet segmentation model for automated aircraft surface inspection. This approach removes the need for expensive real-world annotation data collection by training entirely on procedurally generated images.',
-		highlight: 'IEEE Published, 2022 — reduced real-world training data by 90%',
+		highlight: 'IEEE Published, 2022, reduced real-world training data by 90%',
 		tech: ['Python', 'TensorFlow', 'Blender', 'Docker', 'NumPy'],
 		github: 'https://github.com/NathanJGaul/thesis-pipeline',
 		image: '/images/projects/computer-vision-inspection.png',

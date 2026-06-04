@@ -11,10 +11,10 @@
 			<div class="lg:col-span-3 card bg-base-100">
 				<div class="card-body px-0">
 					<p class="text-base leading-relaxed text-base-content/70">
-						Defense software engineering leader with 8 years of full-stack development and operational test experience, all with an active TS/SCI clearance. Led tri-service evaluation of the DoD's first Joint Cyber C2 platform ($765M, 23K warfighters), translating field requirements from Air Force, Army, and Navy stakeholders into test architectures that resolved 6 critical deficiencies. At the AF-MIT AI Accelerator, deployed a production GPT-4 pipeline that replaced 800+ hours of annual manual reporting for USAF operations. Currently building production C#/.NET and Python applications at DS2 for DoD clients.
+						Defense software engineering leader with 8 years of full-stack development and operational test experience, all with an active TS/SCI clearance. Led tri-service evaluation of the DoD's first Joint Cyber C2 platform, translating field requirements from Air Force, Army, and Navy stakeholders into test architectures that resolved 6 critical deficiencies. At the AF-MIT AI Accelerator, deployed a production GPT-4 pipeline that replaced manual reporting for USAF operations. Currently building production C#/.NET and Python applications at DS2 for DoD clients.
 					</p>
 					<p class="text-base leading-relaxed text-base-content/70 mt-4">
-						My technical work ranges from GPU-accelerated computer vision systems for real-time airfield damage detection to full-stack React and Svelte web applications to LLM-powered operational tooling. I'm comfortable across the stack and across domains — from Python data pipelines and deep learning models to C#/.NET desktop applications and system architecture.
+						My technical work ranges from GPU-accelerated computer vision systems for real-time airfield damage detection to full-stack React and Svelte web applications to LLM-powered operational tooling. I'm comfortable across the stack and across domains, from Python data pipelines and deep learning models to C#/.NET desktop applications and system architecture.
 					</p>
 				</div>
 			</div>

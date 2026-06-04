@@ -13,15 +13,11 @@
 			/>
 		</div>
 		<div class="w-full lg:w-7/12 max-w-xl">
-			<p class="text-xs font-semibold tracking-widest uppercase text-base-content/40 mb-3">Defense Software Engineering Lead</p>
 			<h1 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight">Nathan Gaul</h1>
 			<p class="text-xl md:text-2xl mt-2 font-medium text-base-content/70">
 				Full-stack &middot; C2 systems &middot; AI pipelines &middot; Active TS/SCI
 			</p>
 			<div class="divider my-4"></div>
-			<p class="text-base leading-relaxed text-base-content/60 max-w-prose">
-				Defense software engineering leader with 8 years of full-stack development and operational test experience. Led tri-service evaluation of the DoD's first Joint Cyber C2 platform, translating field requirements into test architectures that resolved 6 critical deficiencies for 23,000 warfighters. Deployed production GPT-4 pipelines at the AF-MIT AI Accelerator, cutting 800+ hours of annual manual reporting. Currently building C#/.NET and Python applications for DoD clients.
-			</p>
 			<div class="flex flex-wrap items-center gap-3 mt-8">
 				<a href="#contact" class="btn btn-primary">Get in touch</a>
 				<a href="#projects" class="btn btn-outline">View Projects</a>

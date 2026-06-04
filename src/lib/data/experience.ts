@@ -37,11 +37,11 @@ const experience: ExperienceEntry[] = [
 		period: 'Mar 2022 – Mar 2026',
 		type: 'leadership',
 		bullets: [
-			"Led the one-year tri-service evaluation of the DoD's first Joint Cyber C2 platform ($765M, 23K warfighters): gathered requirements from Air Force, Army, and Navy field operators, translated them into test architecture, identified 6 critical deficiencies, and tracked resolution across service stakeholders",
-			'Directed AI-enabled operational test for 7 Joint Major Defense Acquisition Programs ($14.2B+), validating C2, AI, and autonomous system capabilities against national security mission requirements',
+			"Led the one-year tri-service evaluation of the DoD's first Joint Cyber C2 platform: gathered requirements from Air Force, Army, and Navy field operators, translated them into test architecture, identified 6 critical deficiencies, and tracked resolution across service stakeholders",
+			'Directed AI-enabled operational test for 7 Joint Major Defense Acquisition Programs, validating C2, AI, and autonomous system capabilities against national security mission requirements',
 			'Designed HIL/SIL operational test for defense weapons systems; managed data collection plans and KPP/KSA performance metrics across 47 flight test events',
-			'Ran cyber vulnerability assessments for a $350M cloud-based C2 program, saving 1,200 man-hours and accelerating the test schedule by 15%',
-			'Led a 63-member, 10-organization working group synchronizing operators, developers, and integration/test/training teams across 2 joint C2 programs totaling $1.5B'
+			'Ran cyber vulnerability assessments for a cloud-based C2 program, accelerating the test schedule by 15%',
+			'Led a 63-member, 10-organization working group synchronizing operators, developers, and integration/test/training teams across 2 joint C2 programs'
 		]
 	},
 	{
@@ -50,9 +50,9 @@ const experience: ExperienceEntry[] = [
 		period: 'Jun 2017 – Jul 2020',
 		type: 'leadership',
 		bullets: [
-			'Managed a 34-person multidisciplinary engineering team on a $12M directed energy research program, coordinating hardware and software subsystem integration with industry partners across the full program lifecycle',
+			'Managed a 34-person multidisciplinary engineering team on a directed energy research program, coordinating hardware and software subsystem integration with industry partners across the full program lifecycle',
 			'Designed a scalable pulsed laser system exceeding energy targets by 50% through optimized thermal management',
-			'Prevented a 6-month schedule slip through early risk-reduction analysis, protecting a 7-figure program timeline'
+			'Prevented a 6-month schedule slip through early risk-reduction analysis'
 		]
 	}
 ];

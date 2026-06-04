@@ -157,7 +157,7 @@
 			ctx.globalAlpha = layer.fillAlpha;
 			ctx.fill();
 
-			// Ridgeline — glow pass then sharp pass
+			// Ridgeline: glow pass then sharp pass
 			ctx.beginPath();
 			ctx.moveTo(visible[0].x, visible[0].y);
 			for (let i = 1; i < visible.length; i++) ctx.lineTo(visible[i].x, visible[i].y);
