@@ -11,13 +11,22 @@ export type Project = {
 
 const projects: Project[] = [
 	{
+		title: 'Orbital Watch',
+		description:
+			'A real-time satellite telemetry dashboard with a .NET BackgroundService simulator feeding Redis pub/sub, bridged to browser clients via a SignalR hub. A Three.js WebGL orbital globe renders live lat/lon/alt positions through a geodetic-to-Cartesian coordinate transform with ring-buffered trail geometry. The SQL schema handles conjunction alerts and maneuver tracking with composite temporal indexes and DeleteBehavior.Restrict for audit integrity. The SignalR hub uses JWT auth with .NET 10 built-in rate limiting and CSP headers mapped to NIST 800-53 AU-2/AU-3.',
+		highlight: 'Real-time satellite telemetry with Three.js globe, Redis pub/sub, and SignalR',
+		tech: ['.NET Core 10', 'React 18', 'TypeScript', 'Three.js', 'Redis', 'SignalR', 'Docker'],
+		github: 'https://github.com/NathanJGaul/orbital-watch',
+		featured: true
+	},
+	{
 		title: 'WarBot',
 		description:
 			'End-to-end GPT-4 pipeline for USAF operator use: RAG-adjacent integration with structured operational data, multi-step agent workflows for summarization and reporting, and a Streamlit front end for non-technical users. Deployed to a live USAF operational test environment, cutting 800+ hours/year of manual work.',
 		highlight: 'Deployed to USAF test environment, saved 800+ hours/year',
 		tech: ['Python', 'OpenAI API', 'LangChain', 'GPT-4', 'Streamlit'],
 		github: 'https://github.com/NathanJGaul/warbot',
-		featured: true
+		featured: false
 	},
 	{
 		title: 'Damage Detection Algorithm (DDA)',
