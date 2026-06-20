@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { prepare, layout } from '@chenglou/pretext';
   import MountainBackdrop from '$lib/components/MountainBackdrop.svelte';
+  import HeroBackdrop from '$lib/components/hero/HeroBackdrop.svelte';
   import { experiments } from '$lib/data/experiments';
 
   let container: HTMLDivElement;
@@ -52,7 +53,14 @@
     class:opacity-100={done}
     class:opacity-0={!done}
   >
-    <MountainBackdrop opacity={0.6} color="#5299e0" showGrid={false} layers={4} speed={0.3} interactive={false} />
+    {#if experiments.hero}
+      <div class="absolute inset-0 opacity-95">
+        <HeroBackdrop />
+      </div>
+
+    {:else}
+      <MountainBackdrop opacity={0.6} color="#5299e0" showGrid={false} layers={4} speed={0.3} interactive={false} />
+    {/if}
   </div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-4 w-full pt-24 pb-20 md:pt-28 md:pb-24">
@@ -77,7 +85,7 @@
         >
           <p class="text-base md:text-lg text-text-secondary mt-6 leading-relaxed max-w-xl">
             Defense software, AI pipelines, and real-time operations.
-            I work where reliability is not optional -- bridging field requirements
+            I work where reliability is not optional, bridging field requirements
             with technical architecture across C2 systems, computer vision, and
             production LLM deployments.
           </p>
@@ -106,7 +114,7 @@
         </h1>
         <p class="text-base md:text-lg text-text-secondary mt-6 leading-relaxed max-w-xl">
           Defense software, AI pipelines, and real-time operations.
-          I work where reliability is not optional -- bridging field requirements
+          I work where reliability is not optional, bridging field requirements
           with technical architecture across C2 systems, computer vision, and
           production LLM deployments.
         </p>

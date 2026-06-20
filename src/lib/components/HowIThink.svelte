@@ -4,10 +4,10 @@
   import { experiments } from '$lib/data/experiments';
 
   const phrases = [
-    { id: 'mission', short: 'systems that have to work', full: 'I care about systems that have to work. Not abstractly -- I mean the kind of work where failure means a mission doesn\'t happen, a report doesn\'t get filed, a decision gets made without the right data.' },
-    { id: 'arc', short: 'hardware to AI', full: 'I started in hardware -- lasers, thermal management, real-time control systems at AFRL -- then moved through the stack to AI pipelines, web applications, and C2 architectures.' },
+    { id: 'mission', short: 'systems that have to work', full: 'I care about systems that have to work. Not abstractly, I mean the kind of work where failure means a mission doesn\'t happen, a report doesn\'t get filed, a decision gets made without the right data.' },
+    { id: 'arc', short: 'hardware to AI', full: 'I started in hardware, lasers, thermal management, real-time control systems at AFRL, then moved through the stack to AI pipelines, web applications, and C2 architectures.' },
     { id: 'operators', short: 'operator trust', full: 'The hard part is rarely the technology. It\'s building something that actual operators trust enough to use when it counts.' },
-    { id: 'mit', short: 'what MIT taught me', full: 'At the AF-MIT AI Accelerator, I watched non-technical operators adopt a GPT-4 pipeline I built because it fit their workflow instead of fighting it. The best model is worthless if it doesn\'t integrate into how people actually operate.' },
+    { id: 'mit', short: 'what MIT taught me', full: 'At the AF-MIT AI Accelerator, I watched non-technical operators adopt a RAG pipeline I built because it fit their workflow instead of fighting it. The best model is worthless if it doesn\'t integrate into how people actually operate.' },
     { id: 'foundation', short: 'physics foundation', full: 'My electrical engineering background (MS from AFIT) gives me a physics-level foundation. My time in operational test taught me how to measure whether something actually works. Both inform every system I build.' },
   ];
 
@@ -44,14 +44,14 @@
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="space-y-6">
           <p class="text-base text-text-secondary leading-relaxed">
-            I care about systems that have to work. Not abstractly -- I mean
+            I care about systems that have to work. Not abstractly, I mean
             the kind of work where failure means a mission doesn't happen,
             a report doesn't get filed, a decision gets made without the
             right data. That constraint is what I optimize for.
           </p>
           <p class="text-base text-text-secondary leading-relaxed">
-            I started in hardware -- lasers, thermal management, real-time
-            control systems at AFRL -- then moved through the stack to
+            I started in hardware, lasers, thermal management, real-time
+            control systems at AFRL, then moved through the stack to
             AI pipelines, web applications, and C2 architectures. That arc
             taught me that the hard part is rarely the technology. It's
             building something that actual operators trust enough to use
@@ -102,14 +102,14 @@
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="space-y-6">
           <p class="text-base text-text-secondary leading-relaxed">
-            I care about systems that have to work. Not abstractly -- I mean
+            I care about systems that have to work. Not abstractly, I mean
             the kind of work where failure means a mission doesn't happen,
             a report doesn't get filed, a decision gets made without the
             right data. That constraint is what I optimize for.
           </p>
           <p class="text-base text-text-secondary leading-relaxed">
-            I started in hardware -- lasers, thermal management, real-time
-            control systems at AFRL -- then moved through the stack to
+            I started in hardware, lasers, thermal management, real-time
+            control systems at AFRL, then moved through the stack to
             AI pipelines, web applications, and C2 architectures. That arc
             taught me that the hard part is rarely the technology. It's
             building something that actual operators trust enough to use
