@@ -1,52 +1,139 @@
 <script lang="ts">
-	import portraitImg from '$lib/images/portrait-nobg.png?enhanced';
+  import { onMount } from 'svelte';
+  import { prepare, layout } from '@chenglou/pretext';
+  import MountainBackdrop from '$lib/components/MountainBackdrop.svelte';
+  import HeroBackdrop from '$lib/components/hero/HeroBackdrop.svelte';
+  import { experiments } from '$lib/data/experiments';
+
+  let container: HTMLDivElement;
+  let containerWidth = $state(800);
+  let typed = $state('');
+  let showCursor = $state(true);
+  let done = $state(false);
+  let reveal = $state(false);
+
+  const fullText = "I build systems for the critical layer.";
+
+  let prepared = $state<ReturnType<typeof prepare> | null>(null);
+
+  onMount(() => {
+    if (container) {
+      containerWidth = container.clientWidth;
+    }
+    if (!experiments.terminalHero) return;
+
+    prepared = prepare(fullText, `bold 48px "Geist Sans"`);
+
+    let i = 0;
+    const speed = 42;
+    const iv = setInterval(() => {
+      i++;
+      typed = fullText.slice(0, i);
+      if (i >= fullText.length) {
+        clearInterval(iv);
+        done = true;
+        setTimeout(() => { reveal = true; }, 350);
+      }
+    }, speed);
+
+    const ci = setInterval(() => {
+      showCursor = !showCursor;
+    }, 530);
+
+    return () => { clearInterval(iv); clearInterval(ci); };
+  });
 </script>
 
-<section id="hero" class="min-h-dvh flex items-center relative overflow-hidden">
-	<div class="hero-content flex-col lg:flex-row-reverse items-center max-w-6xl mx-auto gap-12 py-20 px-4 w-full">
-		<div class="relative w-full max-w-sm shrink-0">
-			<enhanced:img
-				src={portraitImg}
-				sizes="(min-width: 1024px) 384px, 100vw"
-				class="w-full"
-				alt="Nathan Gaul"
-			/>
-		</div>
-		<div class="w-full lg:w-7/12 max-w-xl">
-			<h1 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight">Nathan Gaul</h1>
-			<p class="text-xl md:text-2xl mt-2 font-medium text-base-content/70">
-				Full-stack &middot; C2 systems &middot; AI pipelines &middot; Active TS/SCI
-			</p>
-			<div class="divider my-4"></div>
-			<div class="flex flex-wrap items-center gap-3 mt-8">
-				<a href="#contact" class="btn btn-primary">Get in touch</a>
-				<a href="#projects" class="btn btn-outline">View Projects</a>
-				<a
-					href="https://www.linkedin.com/in/nathanjgaul/"
-					target="_blank"
-					rel="noreferrer"
-					class="btn btn-ghost btn-circle"
-					aria-label="LinkedIn"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="fill-current"
-						><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-						></path></svg
-					>
-				</a>
-				<a
-					href="https://github.com/nathanjgaul"
-					target="_blank"
-					rel="noreferrer"
-					class="btn btn-ghost btn-circle"
-					aria-label="GitHub"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="fill-current"
-						><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-						></path></svg
-					>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
+<section
+  id="hero"
+  class="relative min-h-[100dvh] flex items-center overflow-hidden"
+>
+  <div
+    class="absolute inset-0 transition-opacity duration-700"
+    class:opacity-100={done}
+    class:opacity-0={!done}
+  >
+    {#if experiments.hero}
+      <div class="absolute inset-0 opacity-95">
+        <HeroBackdrop />
+      </div>
 
+    {:else}
+      <MountainBackdrop opacity={0.6} color="#5299e0" showGrid={false} layers={4} speed={0.3} interactive={false} />
+    {/if}
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 w-full pt-24 pb-20 md:pt-28 md:pb-24">
+    <div class="max-w-2xl" bind:this={container}>
+      {#if experiments.terminalHero}
+        <p class="font-mono text-xs text-accent/80 mb-6 tracking-widest uppercase">
+          nathanjgaul<span class="text-accent/50">/</span>about
+        </p>
+        <h1 class="font-mono text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-text-primary min-h-[1.2em]">
+          {typed}<span
+            class="inline-block w-[0.6em] h-[1.1em] bg-accent/80 align-middle ml-0.5"
+            class:animate-pulse={showCursor}
+            class:opacity-0={!showCursor || done}
+          ></span>
+        </h1>
+        <div
+          class="transition-all duration-500"
+          class:opacity-100={reveal}
+          class:opacity-0={!reveal}
+          class:translate-y-0={reveal}
+          class:translate-y-4={!reveal}
+        >
+          <p class="text-base md:text-lg text-text-secondary mt-6 leading-relaxed max-w-xl">
+            Defense software, AI pipelines, and real-time operations.
+            I work where reliability is not optional, bridging field requirements
+            with technical architecture across C2 systems, computer vision, and
+            production LLM deployments.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mt-10">
+            <a
+              href="#work"
+              class="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-white text-sm font-medium hover:bg-accent/90 transition-colors"
+            >
+              View work
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center px-6 py-3 rounded-lg border border-border text-text-secondary text-sm font-medium hover:text-text-primary hover:border-text-secondary transition-colors"
+            >
+              Get in touch
+            </a>
+          </div>
+        </div>
+      {:else}
+        <p class="font-mono text-xs text-accent/80 mb-6 tracking-widest uppercase">
+          Nathan Gaul
+        </p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] text-text-primary">
+          I build systems for the critical layer.
+        </h1>
+        <p class="text-base md:text-lg text-text-secondary mt-6 leading-relaxed max-w-xl">
+          Defense software, AI pipelines, and real-time operations.
+          I work where reliability is not optional, bridging field requirements
+          with technical architecture across C2 systems, computer vision, and
+          production LLM deployments.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 mt-10">
+          <a
+            href="#work"
+            class="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-white text-sm font-medium hover:bg-accent/90 transition-colors"
+          >
+            View work
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center px-6 py-3 rounded-lg border border-border text-text-secondary text-sm font-medium hover:text-text-primary hover:border-text-secondary transition-colors"
+          >
+            Get in touch
+          </a>
+        </div>
+      {/if}
+    </div>
+  </div>
+</section>

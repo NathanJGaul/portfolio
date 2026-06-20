@@ -1,60 +1,25 @@
 export type Project = {
 	title: string;
 	description: string;
-	highlight: string;
 	tech: string[];
 	github?: string;
 	liveUrl?: string;
-	image?: string;
-	featured: boolean;
 };
 
 const projects: Project[] = [
 	{
 		title: 'Orbital Watch',
 		description:
-			'A real-time satellite telemetry dashboard with a .NET BackgroundService simulator feeding Redis pub/sub, bridged to browser clients via a SignalR hub. A Three.js WebGL orbital globe renders live lat/lon/alt positions through a geodetic-to-Cartesian coordinate transform with ring-buffered trail geometry. The SQL schema handles conjunction alerts and maneuver tracking with composite temporal indexes and DeleteBehavior.Restrict for audit integrity. The SignalR hub uses JWT auth with .NET 10 built-in rate limiting and CSP headers mapped to NIST 800-53 AU-2/AU-3.',
-		highlight: 'Real-time satellite telemetry with Three.js globe, Redis pub/sub, and SignalR',
-		tech: ['.NET Core 10', 'React 18', 'TypeScript', 'Three.js', 'Redis', 'SignalR', 'Docker'],
-		github: 'https://github.com/NathanJGaul/orbital-watch',
-		featured: true
-	},
-	{
-		title: 'WarBot',
-		description:
-			'End-to-end GPT-4 pipeline for USAF operator use: RAG-adjacent integration with structured operational data, multi-step agent workflows for summarization and reporting, and a Streamlit front end for non-technical users. Deployed to a live USAF operational test environment, cutting 800+ hours/year of manual work.',
-		highlight: 'Deployed to USAF test environment, saved 800+ hours/year',
-		tech: ['Python', 'OpenAI API', 'LangChain', 'GPT-4', 'Streamlit'],
-		github: 'https://github.com/NathanJGaul/warbot',
-		featured: false
-	},
-	{
-		title: 'Damage Detection Algorithm (DDA)',
-		description:
-			'Real-time airfield damage detection from aerial ISR video using YOLOv8x, SAHI sliced inference, GStreamer RTSP ingestion, BotSort tracking, and KLV/MISB-0601 metadata parsing. Docker-containerized with a CI/CD FastAPI test harness for repeatable regression testing across single-image, RTSP video, and batch modes.',
-		highlight: 'GPU-accelerated real-time detection from aerial video feeds',
-		tech: ['Python', 'C#', 'Docker', 'YOLOv8', 'gRPC', 'FastAPI', 'GStreamer'],
-		featured: true
-	},
-	{
-		title: 'Computer Vision Pipeline with Synthetic Data',
-		description:
-			'Synthetic imagery pipeline in Python, TensorFlow, and Blender to train a UNet segmentation model for automated aircraft surface inspection. This approach removes the need for expensive real-world annotation data collection by training entirely on procedurally generated images.',
-		highlight: 'IEEE Published, 2022, reduced real-world training data by 90%',
-		tech: ['Python', 'TensorFlow', 'Blender', 'Docker', 'NumPy'],
-		github: 'https://github.com/NathanJGaul/thesis-pipeline',
-		image: '/images/projects/computer-vision-inspection.png',
-		featured: false
+			'Real-time satellite telemetry dashboard with a Three.js WebGL orbital globe, Redis pub/sub, and a SignalR hub. Tracks live lat/lon/alt positions with ring-buffered trail geometry.',
+		tech: ['.NET Core 10', 'React 18', 'Three.js', 'Redis', 'SignalR', 'Docker'],
+		github: 'https://github.com/NathanJGaul/orbital-watch'
 	},
 	{
 		title: 'PointSpire',
 		description:
-			'Full-stack task and project management application with a REST API backend, JWT authentication, and real-time UI updates. Developed collaboratively using Agile/Scrum practices with a structured MVC architecture.',
-		highlight: 'Production-grade full-stack app with MVC architecture',
-		tech: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'REST API'],
-		github: 'https://github.com/NathanJGaul/PointSpire',
-		image: '/images/projects/pointspire.svg',
-		featured: false
+			'Full-stack task and project management with a REST API, JWT authentication, and real-time UI updates. Developed using Agile/Scrum practices with a structured MVC architecture.',
+		tech: ['React', 'Node.js', 'TypeScript', 'MongoDB'],
+		github: 'https://github.com/NathanJGaul/PointSpire'
 	}
 ];
 

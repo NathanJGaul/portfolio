@@ -23,8 +23,8 @@
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tailwindcss/vite": "^4.1.4",
     "@types/node": "^25.6.0",
+    "@types/three": "^0.184.1",
     "cross-env": "^10.1.0",
-    "daisyui": "^5.0.27",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-svelte": "2.46.1",
@@ -62,7 +62,9 @@
     }
   },
   "dependencies": {
-    "theme-change": "^2.5.0"
+    "@chenglou/pretext": "^0.0.8",
+    "@phosphor-icons/core": "^2.1.1",
+    "three": "^0.184.0"
   },
   "engines": {
     "node": ">=18.17.1"
