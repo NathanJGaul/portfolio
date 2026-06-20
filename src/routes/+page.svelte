@@ -1,27 +1,21 @@
 <script lang="ts">
-	import Hero from '$lib/components/Hero.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Skills from '$lib/components/Skills.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import Contact from '$lib/components/Contact.svelte';
-	import Experience from '$lib/components/Experience.svelte';
-	import About from '$lib/components/About.svelte';
-	import Projects from '$lib/components/Projects.svelte';
-
-	import projects from '$lib/data/projects';
-	import skills from '$lib/data/skills';
-	import experience from '$lib/data/experience';
+  import Navbar from '$lib/components/Navbar.svelte';
+  import Hero from '$lib/components/Hero.svelte';
+  import WhatIBuild from '$lib/components/WhatIBuild.svelte';
+  import HowIThink from '$lib/components/HowIThink.svelte';
+  import ProjectGrid from '$lib/components/ProjectGrid.svelte';
+  import Contact from '$lib/components/Contact.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Navbar />
 
 <main id="main-content">
-	<Hero />
-	<About />
-	<Experience {experience} />
-	<Projects />
-	<Skills {skills} />
-	<Contact />
+  <Hero />
+  <WhatIBuild />
+  <HowIThink />
+  <ProjectGrid />
+  <Contact />
 </main>
 
 <Footer />
