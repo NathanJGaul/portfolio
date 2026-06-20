@@ -6,7 +6,7 @@
   import { experiments } from '$lib/data/experiments';
 
   let allTags = $state<{ name: string; active: boolean }[]>([]);
-  let tagPanel: HTMLDivElement;
+  let tagPanel = $state<HTMLDivElement>();
   let tagPrepared: Map<string, ReturnType<typeof prepare>> = new Map();
 
   const font = '12px "Geist Mono"';

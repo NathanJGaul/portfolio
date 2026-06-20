@@ -7,7 +7,7 @@
   const { system, index }: { system: SystemEntry; index: number } = $props();
 
   let open = $state(false);
-  let contentEl: HTMLDivElement;
+  let contentEl = $state<HTMLDivElement>();
   let contentHeight = $state(0);
 
   onMount(() => {
